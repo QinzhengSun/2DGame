@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Font/ZCOOLQingKeHuangYou-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Img/bg/sky.png" type="Texture" id=2]
+[ext_resource path="res://Img/bg/mountain.png" type="Texture" id=3]
+[ext_resource path="res://Scence/Button.tres" type="Theme" id=4]
+[ext_resource path="res://Music/BGM/Arcade-Madness.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Script/Homepage.gd" type="Script" id=10]
+
+[sub_resource type="DynamicFont" id=5]
+size = 150
+font_data = ExtResource( 1 )
+
+[node name="Homepage" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="Sky" type="Sprite" parent="."]
+position = Vector2( 895, 519.5 )
+scale = Vector2( 20.4375, 1.40332 )
+texture = ExtResource( 2 )
+
+[node name="Mountain" type="Sprite" parent="."]
+position = Vector2( 906, 553 )
+scale = Vector2( 2.35339, 1.05957 )
+texture = ExtResource( 3 )
+
+[node name="Play" type="Button" parent="."]
+margin_left = 226.0
+margin_top = 417.0
+margin_right = 366.0
+margin_bottom = 471.0
+theme = ExtResource( 4 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Help" type="Button" parent="."]
+margin_left = 449.0
+margin_top = 417.0
+margin_right = 587.0
+margin_bottom = 470.0
+theme = ExtResource( 4 )
+text = "Help"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 669.0
+margin_top = 419.0
+margin_right = 809.0
+margin_bottom = 473.0
+theme = ExtResource( 4 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 222.0
+margin_top = 123.0
+margin_right = 797.0
+margin_bottom = 298.0
+custom_fonts/font = SubResource( 5 )
+text = "亚瑟的冒险"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Help" to="." method="_on_Help_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

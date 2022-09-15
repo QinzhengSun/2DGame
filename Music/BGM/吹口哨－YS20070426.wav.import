@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/吹口哨－YS20070426.wav-2b9796021277f7fdc0b73e94854b8687.sample"
+
+[deps]
+
+source_file="res://Music/BGM/吹口哨－YS20070426.wav"
+dest_files=[ "res://.import/吹口哨－YS20070426.wav-2b9796021277f7fdc0b73e94854b8687.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

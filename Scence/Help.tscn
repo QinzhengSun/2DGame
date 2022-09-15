@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Font/romulus.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Img/bg/sky.png" type="Texture" id=2]
+[ext_resource path="res://Img/bg/mountain.png" type="Texture" id=3]
+[ext_resource path="res://Scence/Button.tres" type="Theme" id=4]
+[ext_resource path="res://Script/Help.gd" type="Script" id=5]
+[ext_resource path="res://Music/BGM/Arcade-Madness.mp3" type="AudioStream" id=6]
+
+[node name="Help" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Sky" type="Sprite" parent="."]
+position = Vector2( 859, 24 )
+scale = Vector2( 22.3281, 1.51465 )
+texture = ExtResource( 2 )
+
+[node name="Mountain2" type="Sprite" parent="."]
+position = Vector2( 1208, 399 )
+scale = Vector2( 0.904297, 0.579102 )
+texture = ExtResource( 3 )
+
+[node name="Mountain" type="Sprite" parent="."]
+position = Vector2( 283, 399 )
+scale = Vector2( 0.904297, 0.579102 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 20.0
+margin_top = 13.0
+margin_right = 1017.0
+margin_bottom = 203.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "方向键控制角色移动和跳跃，空格发射魔法球。
+
+玩家需要控制角色击杀敌人到达洞口即可通关。
+
+敌人会攻击玩家，玩家受到攻击会随时一条心，玩家总共有4条心，当心用完则玩家失败。
+
+玩家受到攻击后有一秒无敌时间，免疫怪物攻击。
+
+玩家可以通过收集地图中的肉来增加自己的攻击力。
+
+收集金币可以在商人处解锁二段跳技能。
+
+顶一下金色砖块可以掉落额外金币。
+
+玩家掉落或碰到地刺直接死亡。"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+margin_left = 803.0
+margin_top = 502.0
+margin_right = 948.0
+margin_bottom = 566.0
+theme = ExtResource( 4 )
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/哇呜1－xh20070418.wav-06aa0150dd5b631ea89947a9d72aaa21.sample"
+
+[deps]
+
+source_file="res://Music/BGM/哇呜1－xh20070418.wav"
+dest_files=[ "res://.import/哇呜1－xh20070418.wav-06aa0150dd5b631ea89947a9d72aaa21.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

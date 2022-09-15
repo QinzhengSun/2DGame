@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ice-Cream-Truck-Races_Looping.mp3-fe2843e95b544c1e9319a0d45e54875d.mp3str"
+
+[deps]
+
+source_file="res://Music/BGM/Ice-Cream-Truck-Races_Looping.mp3"
+dest_files=[ "res://.import/Ice-Cream-Truck-Races_Looping.mp3-fe2843e95b544c1e9319a0d45e54875d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

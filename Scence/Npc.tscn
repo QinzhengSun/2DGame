@@ -1,0 +1,103 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Script/Npc.gd" type="Script" id=1]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_000.png" type="Texture" id=2]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_005.png" type="Texture" id=3]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_009.png" type="Texture" id=4]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_007.png" type="Texture" id=5]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_006.png" type="Texture" id=6]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_004.png" type="Texture" id=7]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_001.png" type="Texture" id=8]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_002.png" type="Texture" id=9]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_011.png" type="Texture" id=10]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_003.png" type="Texture" id=11]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_010.png" type="Texture" id=12]
+[ext_resource path="res://NPC/Idle Blink/Idle Blink_008.png" type="Texture" id=13]
+[ext_resource path="res://Font/romulus.tres" type="DynamicFont" id=14]
+[ext_resource path="res://Scence/Selection.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Music/BGM/吹口哨－YS20070426.wav" type="AudioStream" id=16]
+[ext_resource path="res://Music/BGM/哇呜1－xh20070418.wav" type="AudioStream" id=17]
+[ext_resource path="res://Music/BGM/男声“恩”zth070518.wav" type="AudioStream" id=18]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 15.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 13.2861, 9.73098 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 14.3189, 10.9588 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[node name="Npc" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.32556, 0.339866 )
+frames = SubResource( 1 )
+animation = "Idle"
+frame = 11
+playing = true
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.5, 3.49999 )
+rotation = -3.14159
+scale = Vector2( 1.54297, -3.75091 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -243, -75.9878 )
+scale = Vector2( 12.6755, 12.5024 )
+shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -139.0
+margin_top = -211.0
+margin_right = 178.0
+margin_bottom = -134.0
+custom_fonts/font = ExtResource( 14 )
+custom_styles/normal = SubResource( 4 )
+text = "嘿冒险家，付给我30个金币
+我可以传授你 “二段跳” 技能"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Selection" parent="." instance=ExtResource( 15 )]
+visible = false
+margin_left = -90.0
+margin_top = -122.0
+margin_right = -90.0
+margin_bottom = -122.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 16 )
+
+[node name="Cheer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+
+[node name="Upset" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 18 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="coinEnough" from="Selection" to="." method="_on_Selection_coinEnough"]
+[connection signal="coinNotEnough" from="Selection" to="." method="_on_Selection_coinNotEnough"]
+[connection signal="refuse" from="Selection" to="." method="_on_Selection_refuse"]

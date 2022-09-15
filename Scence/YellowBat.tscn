@@ -1,0 +1,141 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://Script/YellowBat.gd" type="Script" id=1]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_016.png" type="Texture" id=2]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_006.png" type="Texture" id=3]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_007.png" type="Texture" id=4]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_008.png" type="Texture" id=5]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_009.png" type="Texture" id=6]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_014.png" type="Texture" id=7]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_013.png" type="Texture" id=8]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_010.png" type="Texture" id=9]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_011.png" type="Texture" id=10]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_012.png" type="Texture" id=11]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_000.png" type="Texture" id=12]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_002.png" type="Texture" id=13]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_003.png" type="Texture" id=14]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_004.png" type="Texture" id=15]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_005.png" type="Texture" id=16]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_001.png" type="Texture" id=17]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_000.png" type="Texture" id=18]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_004.png" type="Texture" id=19]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_017.png" type="Texture" id=20]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_002.png" type="Texture" id=21]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_009.png" type="Texture" id=22]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_011.png" type="Texture" id=23]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_003.png" type="Texture" id=24]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_005.png" type="Texture" id=25]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_006.png" type="Texture" id=26]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_010.png" type="Texture" id=27]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_008.png" type="Texture" id=28]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_001.png" type="Texture" id=29]
+[ext_resource path="res://Img/Enemys/YellowBat/Hurt/Hurt_007.png" type="Texture" id=30]
+[ext_resource path="res://Img/Enemys/YellowBat/Idle Blinking/Idle Blinking_015.png" type="Texture" id=31]
+[ext_resource path="res://Greenmonster.tres" type="Theme" id=32]
+[ext_resource path="res://Scence/Teeth.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Music/BGM/爪子攻击-YS070516.wav" type="AudioStream" id=34]
+[ext_resource path="res://Music/BGM/箭4-mcx20070511.wav" type="AudioStream" id=35]
+[ext_resource path="res://Music/BGM/U.I. Sound 19.wav" type="AudioStream" id=36]
+[ext_resource path="res://Img/Enemys/YellowBat/Smoke/Smoke_000.png" type="Texture" id=37]
+[ext_resource path="res://Img/Enemys/YellowBat/Smoke/Smoke_006.png" type="Texture" id=38]
+[ext_resource path="res://Img/Enemys/YellowBat/Smoke/Smoke_003.png" type="Texture" id=39]
+[ext_resource path="res://Img/Enemys/YellowBat/Smoke/Smoke_004.png" type="Texture" id=40]
+[ext_resource path="res://Img/Enemys/YellowBat/Smoke/Smoke_002.png" type="Texture" id=41]
+[ext_resource path="res://Img/Enemys/YellowBat/Smoke/Smoke_001.png" type="Texture" id=42]
+[ext_resource path="res://Img/Enemys/YellowBat/Smoke/Smoke_005.png" type="Texture" id=43]
+[ext_resource path="res://Img/Enemys/YellowBat/Smoke/Smoke_007.png" type="Texture" id=44]
+[ext_resource path="res://Img/Enemys/YellowBat/Smoke/Smoke_008.png" type="Texture" id=45]
+[ext_resource path="res://Img/Enemys/YellowBat/Smoke/Smoke_009.png" type="Texture" id=46]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 37 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 38 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "Die",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 29 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 19 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 23 ) ],
+"loop": false,
+"name": "Hurt",
+"speed": 25.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 17 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 31 ), ExtResource( 2 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 15.0
+} ]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 16.0791, 10 )
+
+[node name="YellowBat" type="KinematicBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource( 1 )
+teeth = ExtResource( 33 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1, 0 )
+scale = Vector2( 0.141497, 0.146777 )
+frames = SubResource( 2 )
+animation = "Idle"
+frame = 17
+playing = true
+
+[node name="Bodyshape" type="CollisionShape2D" parent="."]
+position = Vector2( 8, 3 )
+scale = Vector2( 1.54801, 1.49418 )
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 8, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 11.5, 0 )
+scale = Vector2( 39.71, 25.3379 )
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = -51.0
+margin_top = -38.0
+margin_right = 72.0
+margin_bottom = -24.0
+theme = ExtResource( 32 )
+value = 100.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( -28, 0 )
+
+[node name="Position2D2" type="Position2D" parent="."]
+position = Vector2( 47, -1 )
+
+[node name="TouchPlayer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchPlayer"]
+position = Vector2( 8, 3 )
+scale = Vector2( 1.62289, 1.56205 )
+shape = SubResource( 1 )
+
+[node name="Attack" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 34 )
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 35 )
+
+[node name="Die" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 36 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="TouchPlayer" to="." method="_on_TouchPlayer_body_entered"]

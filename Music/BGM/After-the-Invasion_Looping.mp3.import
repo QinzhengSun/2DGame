@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/After-the-Invasion_Looping.mp3-743864a8acc5f323bb41891b60eabef5.mp3str"
+
+[deps]
+
+source_file="res://Music/BGM/After-the-Invasion_Looping.mp3"
+dest_files=[ "res://.import/After-the-Invasion_Looping.mp3-743864a8acc5f323bb41891b60eabef5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

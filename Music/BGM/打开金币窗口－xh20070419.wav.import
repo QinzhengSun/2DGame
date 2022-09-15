@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/打开金币窗口－xh20070419.wav-a2c2d0cfc563a1aa86f1436dbb68ceda.sample"
+
+[deps]
+
+source_file="res://Music/BGM/打开金币窗口－xh20070419.wav"
+dest_files=[ "res://.import/打开金币窗口－xh20070419.wav-a2c2d0cfc563a1aa86f1436dbb68ceda.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
